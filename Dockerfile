@@ -20,4 +20,4 @@ RUN $(npm bin)/cypress verify
 # Set to use Sorry Cypress
 WORKDIR ../../../root/.cache/Cypress/6.0.1/Cypress/resources/app/packages/server/config/
 
-RUN sed -i 's|https://api.cypress.io/|http://localhost:1234|g' app.yml
+RUN sed -i 's|https://api.cypress.io/|http://sorry-cypress-demo-1462500339.us-east-2.elb.amazonaws.com:8080|g' app.yml
