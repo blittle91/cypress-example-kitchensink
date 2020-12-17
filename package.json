@@ -47,9 +47,7 @@
     "local:run:record": "start-test 8080 cy:run:record",
     "ci:set-port": "node ./scripts/set-port",
     "semantic-release": "semantic-release",
-
-    "cypress:ci": "start-server-and-test 'npm start' http://localhost:8082 'npm cy:run'"
-
+    "cypress:wait": "start-server-and-test 'npm start' http://localhost:8082"
   },
   "repository": {
     "type": "git",
