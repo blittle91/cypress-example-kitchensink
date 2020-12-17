@@ -18,4 +18,6 @@ RUN npm ci
 RUN $(npm bin)/cypress verify
 
 # Set to use Sorry Cypress
-RUN sed -i 's/api.cypress.io/http://localhost:1234/g' /root/.cache/Cypress/6.1.0/Cypress/resources/app/packages/server/config/app.yml
+WORKDIR ../../../root/.cache/Cypress/6.0.1/Cypress/resources/app/packages/server/config/
+
+RUN sed -i 's|https://api.cypress.io/|http://localhost:1234|g' app.yml
